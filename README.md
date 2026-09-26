@@ -1,8 +1,13 @@
 # 🩺 jetson-doctor
 
+[![ci](https://github.com/abs1903/jetson-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/abs1903/jetson-doctor/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **One-shot health check for NVIDIA Jetson boards** — find the misconfigurations that break AI stacks *before* they waste your evening.
 
 [English](#english) | [中文](#中文)
+
+![jetson-doctor report on Orin Nano Super](docs/report-orin-nano-super.png)
 
 ---
 

@@ -1,0 +1,20 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck
+          shellcheck -S warning jetson-doctor.sh install.sh tests/smoke-test.sh
+      - name: smoke test (non-Jetson graceful path)
+        run: |
+          chmod +x jetson-doctor.sh tests/smoke-test.sh
+          ./tests/smoke-test.sh
