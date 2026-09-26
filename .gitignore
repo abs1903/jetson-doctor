@@ -1,0 +1,6 @@
+# local artifacts
+*.log
+*.out
+.venv/
+__pycache__/
+.DS_Store
